@@ -1,0 +1,15 @@
+<div class="calendar">
+    <div class="calendar-month">
+        <div class="change-month-button" ng-click="dpCtrl.changeMonthButtonOnClick('left')"><</div>
+            <div class="month-name">
+                <p>{{currentMonth.name}}</p>
+            </div>
+            <div class="change-month-button" ng-click="dpCtrl.changeMonthButtonOnClick('right')">></div>
+    </div>
+    <div class="calendar-days">
+        <div class="calendar-day" ng-repeat="day in currentMonth.days">
+            <button ng-click="dpCtrl.dayBtnOnClick(day, currentMonth.number)" ng-class="{ active: dpCtrl.isPickedDay(day, currentMonth.number)}"
+                type="button-day">{{day}}</button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">    	
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>Zodiac</title>
+
+    <link rel="stylesheet" href="dist/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">    
+    <link href="https://fonts.googleapis.com/css?family=Coming+Soon|Raleway" rel="stylesheet"> 
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>   
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular-animate.min.js"></script>    
+    <script src="app/app.module.js"></script>
+    <script src="app/components/zodiacWheel/zodiacWheel.component.js"></script>
+    <script src="app/components/datePicker/datePicker.component.js"></script>
+    <script src="app/components/zodiacWheel/wheelStartSpin.directive.js"></script>
+</head>
+
+<body ng-app="app" >
+    <div class="container" ng-cloak ng-controller="appController as appCtrl">
+        <zodiac-wheel active-sign="appCtrl.activeSign"></zodiac-wheel>
+        <date-picker date-picked="appCtrl.onDatePickedCallback(signOfThatDate)"></date-picker>    
+    </div>    
+</body>
+
+</html>

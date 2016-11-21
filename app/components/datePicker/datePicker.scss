@@ -1,0 +1,94 @@
+ date-picker{     
+     width: 100%;
+     max-height: 180px;
+     display: flex;
+     justify-content: center;
+     z-index: 3;
+
+     @media (max-height: 700px){
+        position: absolute;
+        bottom: 0;
+     }
+
+    .calendar{
+        background-color: transparent;
+        width: 500px;
+        user-select: none;        
+        @media (max-height: 500px){
+            width: auto;
+        }
+        .calendar-month{
+            display: flex;    
+            height: 32px;      
+            text-align: center;
+            padding-bottom: 30px;
+            margin-right: 25px;
+            margin-left: 25px;
+            font-family: 'Raleway', sans-serif;                    
+            font-size: 24px;
+            color: rgba(255,255,255, 0.7);
+
+            .change-month-button{
+                flex-grow: 1;
+            }
+
+            .change-month-button:hover, .month-name:hover{
+                color: rgba(255,255,255, 1); 
+                cursor: pointer;
+            }
+
+            .month-name{
+                flex-grow: 8;
+                color: rgba(255,255,255, 0.8);    
+            }
+
+            p{
+                margin: 0;
+            }
+        }
+
+        .calendar-days{
+            display: flex;
+            flex-flow: row wrap;        
+            background-color: transparent;
+            justify-content: center;    
+            .calendar-day{
+                background: transparent;
+                height: 35px;
+                width: 35px;
+                flex-basis: auto;
+                padding: 0;
+                margin: 2px;
+                
+                @media (max-width: 500px), (max-height: 500px){
+                    height: 25px;
+                    width: 25px;
+                }
+
+                button{
+                    padding: 0;
+                    width: 100%;
+                    height: 100%;
+                    border: none;
+                    background-color: transparent;
+                    color: rgba(255,255,255, 0.7);
+                    transition: background-color 0.6s ease-in-out;
+                }
+
+                button.active{
+                    border: solid 2px rgba(255,255,255, 0.7);
+                    border-radius: 50px;
+                }
+
+                button:focus{
+                    outline: 0;
+                }
+
+                button:hover{
+                    color: rgba(255,255,255, 1);   
+                    cursor: pointer;              
+                }
+            }    
+        }
+    }
+ }

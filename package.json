@@ -1,0 +1,20 @@
+{
+  "name": "zodiac",
+  "version": "0.0.1",
+  "description": "simple web application",
+  "main": "index.html",
+  "scripts": {
+    "conc": "concurrently \"lite-server\" \"gulp watch\"",
+    "serveronly": "lite-server"
+  },
+  "author": "Andrey Kurilov",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^3.1.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-sass": "^2.3.2",
+    "lite-server": "^2.2.2"
+  }
+}

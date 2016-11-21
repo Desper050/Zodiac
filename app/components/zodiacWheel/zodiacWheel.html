@@ -1,0 +1,18 @@
+<div id="wheel">  
+    <div class="star-sign" ng-repeat="sign in zodiacSigns track by $index">
+        <img 
+        class="star-sign-image" 
+        ng-class="{ active: zwCtrl.isActiveSign(sign) }"
+        ng-src="app/images/signs-as-stars/{{sign}}.png" 
+        style="top: {{zwCtrl.getBasePositionTop($index)}}px; left: {{zwCtrl.getBasePositionLeft($index)}}px;"        
+        wheel-start-spin>  
+    </div>     
+    <div class="picked-sign">
+        <div ng-show="zwCtrl.isActiveSign(sign)" class="current-sign" ng-repeat="sign in zodiacSigns">
+            <img ng-src="app/images/blue-signs/{{sign}}.png">             
+            <h2>Your sign is: <a>{{sign}}</a></h2>       
+        </div>
+    </div>  
+</div>
+
+
