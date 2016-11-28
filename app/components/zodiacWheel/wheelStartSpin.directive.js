@@ -21,8 +21,8 @@
                         let wheelTopOffset = $('#wheel').offset().top;                        
 
                         $('.star-sign').each(function () {
-                            let leftPos = Math.round(centerLeft + radius * Math.cos(currentSignAngle * Math.PI / 180) - (signWidth / 2));
-                            let topPos = Math.round(centerTop + radius * Math.sin(currentSignAngle * Math.PI / 180) - (signHeight / 2));                            
+                            let leftPos = centerLeft + radius * Math.cos(currentSignAngle * Math.PI / 180) - (signWidth / 2);
+                            let topPos = centerTop + radius * Math.sin(currentSignAngle * Math.PI / 180) - (signHeight / 2);                            
 
                             let divWidth = $(this).width();
                             if(divWidth + leftPos > windowWidth){

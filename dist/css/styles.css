@@ -183,7 +183,7 @@ zodiac-wheel {
       @media (max-width: 500px), (max-height: 500px) {
         zodiac-wheel #wheel .picked-sign {
           width: 275px;
-          height: 275px;
+          height: 362px;
           margin-left: -137px;
           margin-top: -160px; } }
       zodiac-wheel #wheel .picked-sign .current-sign.ng-hide-add, zodiac-wheel #wheel .picked-sign .current-sign.ng-hide-remove {
